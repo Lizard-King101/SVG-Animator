@@ -1,10 +1,17 @@
 <ion-content>
-  <div id="view" #View>
+
+  <div id="view" [class.expanded]="menuController ? menuController.collapsed : false" #View>
 
   </div>
-  <div id="menu" #Menu>
+  <div id="menu" [class.collapsed]="menuController ? menuController.collapsed : false" #Menu>
     <div class="header">
-      <a class="btn"></a>
+      <a class="btn menu-toggle" (click)="menuController.toggle()"><i class="fas fa-bars"></i></a>
+    </div>
+    <div class="tools">
+      
+    </div>
+    <div class="container">
+      
     </div>
   </div>
 </ion-content>

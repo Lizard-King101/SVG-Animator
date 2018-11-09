@@ -4,7 +4,7 @@ import { NavController, Events } from 'ionic-angular';
 //import { ElectronProvider } from '../../providers/electron/electron';
 import { DataManager } from '../../providers/DataManager';
 
-//import { GamePage } from '../game/game';
+//import { Create } from '../game/game';
 import { CreateModal } from './create/create';
 
 @Component({
@@ -171,6 +171,9 @@ function CanvasAnimation() {
   }
 
   this.update = () => {
+    if(this.size.x == 0 && this.size.y == 0){
+      this.setSize();
+    }
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
     this.ctx.clearRect(0, 0, this.size.x, this.size.y);
     this.ctx.save();
@@ -217,6 +220,7 @@ function Dot(){
   }
 
   this.update = () => {
+    
     this.pos = {
       x: this.pos.x,
       y: this.pos.y -= this.speed

@@ -38,19 +38,29 @@ ion-app {
           background-color: unset;
           color: rgb(200,200,200);
           
-
-
           .fixed-content {
             z-index: 0;
 
+            #canvas-container {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              top: 0;
+          
+              canvas {
+                height: 100%;
+                width: 100%;
+              }
+            }
+
             .background-img{
-              position: relative;
+              position: absolute;
               height: calc(100% - 30px);
               top: 30px;
-
-              img{
-                object-fit: cover;
-              }
+              width: 100%;
+              background-position: bottom;
+              background-size: cover;
+              background-repeat: no-repeat;
             }
           }
 

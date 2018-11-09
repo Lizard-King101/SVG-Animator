@@ -8,10 +8,10 @@ let windows = [];
 function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 600,
-    height: 400,
-    minWidth: 500,
-    minHeight: 300,
+    width: 1080,
+    height: 600,
+    minWidth: 800,
+    minHeight: 500,
     backgroundColor: '#ffffff',
     frame: false
   })
